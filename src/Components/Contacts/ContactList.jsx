@@ -5,7 +5,7 @@ import {
   ContactItemHeader,
   ContactItemText,
   ContactItemButton,
-} from 'Components/Contacts/ContactList.styled';
+} from 'components/Contacts/ContactList.styled';
 
 export const ContactList = ({ contacts, deleteContact }) => {
   return (

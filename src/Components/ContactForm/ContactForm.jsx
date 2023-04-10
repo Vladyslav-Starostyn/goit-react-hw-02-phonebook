@@ -7,7 +7,7 @@ import {
   Label,
   SubmitButton,
   Error,
-} from 'Components/ContactForm/ContactForm.styled';
+} from 'components/ContactForm/ContactForm.styled';
 
 const schema = yup.object().shape({
   name: yup

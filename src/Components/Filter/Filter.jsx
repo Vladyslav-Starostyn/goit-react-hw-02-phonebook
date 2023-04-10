@@ -3,7 +3,7 @@ import {
   FilterWrapper,
   FilterInput,
   FilterLabel,
-} from 'Components/Filter/Filter.styled';
+} from 'components/Filter/Filter.styled';
 export const Filter = ({ value, onFilterChange }) => {
   return (
     <FilterWrapper>
