@@ -17,12 +17,12 @@ export class App extends Component {
   };
 
   handleSubmit = (values, { resetForm }) => {
-
     const { name, number } = values;
     const contact = {
       name,
       number,
     };
+
     const dublicateContact = this.findDublicateContact(
       contact,
       this.state.contacts
@@ -31,8 +31,8 @@ export class App extends Component {
       ? alert(`${contact.name} is already in contacts`)
       : this.setState(prevState => ({
           contacts: [...prevState.contacts, { ...values, id: nanoid() }],
-      }));
-    
+        }));
+
     resetForm();
   };
 
