@@ -30,7 +30,7 @@ export class App extends Component {
     dublicateContact
       ? alert(`${contact.name} is already in contacts`)
       : this.setState(prevState => ({
-          contacts: [...prevState.contacts, { ...values, id: nanoid() }],
+          contacts: [...prevState.contacts, { ...contact, id: nanoid() }],
         }));
 
     resetForm();
