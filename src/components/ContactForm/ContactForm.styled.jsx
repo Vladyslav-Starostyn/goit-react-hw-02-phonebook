@@ -34,7 +34,7 @@ export const Label = styled.label`
 export const SubmitButton = styled.button`
   width: 150px;
   height: 40px;
-  background-color: #A8B970;
+  background-color: #a8b970;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -43,7 +43,7 @@ export const SubmitButton = styled.button`
   outline-color: #bb8239;
   margin-bottom: 10px;
   :hover {
-    border: 2px solid #3A441B;
+    border: 2px solid #3a441b;
     box-shadow: -6px 16px 11px -9px rgba(31, 25, 25, 0.75);
   }
 `;
