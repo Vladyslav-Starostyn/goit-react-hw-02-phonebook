@@ -7,7 +7,7 @@ import {
 export const Filter = ({ value, onFilterChange }) => {
   return (
     <FilterWrapper>
-      <FilterLabel htmlFor="text">Find contacts by name</FilterLabel>
+      <FilterLabel htmlFor="text">Finde contacts by name</FilterLabel>
       <FilterInput
         type="text"
         name="filter"

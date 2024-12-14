@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Form, Field, ErrorMessage } from 'formik';
 
 export const FormEl = styled(Form)`
+  margin: 20px 0px;
   display: flex;
   min-width: 420px;
   align-items: center;

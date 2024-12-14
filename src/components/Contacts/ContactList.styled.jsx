@@ -17,7 +17,7 @@ export const ContactListItem = styled.li`
   justify-content: center;
   align-items: center;
   width: 400px;
-  border: 2px solid #3A441B;
+  border: 2px solid #3a441b;
   padding: 10px;
   text-align: center;
   border-radius: 8px;
@@ -33,13 +33,13 @@ export const ContactItemHeader = styled.h2`
 export const ContactItemText = styled.p`
   margin: 3px;
   font-weight: 600;
-  color: #3A441B;
+  color: #3a441b;
 `;
 
 export const ContactItemButton = styled.button`
   width: 100px;
-  background-color: #A8B970;
-  border: 2px solid #A8B970;
+  background-color: #a8b970;
+  border: 2px solid #a8b970;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 600;
@@ -47,7 +47,7 @@ export const ContactItemButton = styled.button`
   margin-top: auto;
   padding: 3px;
   :hover {
-    border: 2px solid #3A441B;
+    border: 2px solid #3a441b;
     box-shadow: -6px 16px 11px -9px rgba(31, 25, 25, 0.75);
   }
 `;

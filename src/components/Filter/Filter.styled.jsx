@@ -4,6 +4,7 @@ export const FilterWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 20px;
 `;
 
 export const FilterInput = styled.input`
@@ -13,8 +14,8 @@ export const FilterInput = styled.input`
   margin-bottom: 15px;
   padding: 5px;
   border-radius: 5px;
-  outline-color: #3A441B;
-  border-color: #3A441B;
+  outline-color: #3a441b;
+  border-color: #3a441b;
   font-weight: 700;
 `;
 
@@ -22,5 +23,5 @@ export const FilterLabel = styled.label`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 5px;
-  color: #3A441B;
+  color: #3a441b;
 `;
