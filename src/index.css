@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
 
 body {
   font-family: sans-serif;
@@ -38,5 +38,9 @@ code {
 }
 
 :root {
-  --brand-color: #3f51b5;
+  --first-brand-color: #343434;
+  --first-brand-background-color: #6A6A6A;
+  --second-brand-color: #ff590a;
+  --second-brand-background-color: #FF5100;
+  --error-color: #bf0a32eb;
 }

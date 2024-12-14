@@ -3,7 +3,7 @@ import {
   ContactListEl,
   ContactListItem,
   ContactItemHeader,
-  ContactItemText,
+  ContactItemNumber,
   ContactItemButton,
 } from 'components/Contacts/ContactList.styled';
 
@@ -14,7 +14,7 @@ export const ContactList = ({ contacts, deleteContact }) => {
         return (
           <ContactListItem key={id}>
             <ContactItemHeader>{name}</ContactItemHeader>
-            <ContactItemText>{number}</ContactItemText>
+            <ContactItemNumber>{number}</ContactItemNumber>
             <ContactItemButton type="button" onClick={() => deleteContact(id)}>
               Delete
             </ContactItemButton>

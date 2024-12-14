@@ -67,7 +67,9 @@ export class App extends Component {
       <Container>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.handleSubmit} />
-        {this.state.contacts.length > 0 && <h2>Contacts</h2>}
+        {this.state.contacts.length > 0 && (
+          <h2 style={{ fontSize: 30 }}>Contacts:</h2>
+        )}
         {this.state.contacts.length > 0 && (
           <Filter
             value={this.state.filter}
