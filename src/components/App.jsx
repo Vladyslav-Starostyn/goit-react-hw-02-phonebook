@@ -15,6 +15,7 @@ export class App extends Component {
     ],
     filter: '',
   };
+
   handleSubmit = (values, { resetForm }) => {
     const { name, number } = values;
     const contact = {
