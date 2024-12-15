@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 
-export const ContactItemHeader = styled.h2`
-  margin: 0;
-  margin-bottom: auto;
-`;
-
 export const ContactItemNumber = styled.p`
-  margin: 3px;
   font-weight: 600;
   font-size: 24px;
   color: var(--first-brand-color);

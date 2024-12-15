@@ -17,10 +17,9 @@ export const ContactListItem = styled.li`
   justify-content: center;
   align-items: center;
   width: 400px;
-  border: 2px solid var(--first-brand-color);
   padding: 6px;
   text-align: center;
   border-radius: 8px;
   background-color: var(--first-brand-background-color);
-  box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.5);
 `;
