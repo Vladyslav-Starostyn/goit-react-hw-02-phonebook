@@ -1,13 +1,13 @@
-import { PropTypes } from "prop-types";
-import { Formik } from "formik";
-import * as yup from "yup";
+import { PropTypes } from 'prop-types';
+import { Formik } from 'formik';
+import * as yup from 'yup';
 import {
   FormEl,
   InputEl,
   Label,
   SubmitButton,
   Error,
-} from "./ContactForm.styled";
+} from './ContactForm.styled';
 
 const schema = yup.object().shape({
   name: yup
@@ -23,14 +23,14 @@ const schema = yup.object().shape({
     .max(10)
     .matches(
       /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
-      "Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+      'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
     )
     .required(),
 });
 
 const initialValues = {
-  name: "",
-  number: "",
+  name: '',
+  number: '',
 };
 
 const ContactForm = ({ onSubmit }) => {

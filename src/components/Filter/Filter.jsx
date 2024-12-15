@@ -1,5 +1,5 @@
-import { PropTypes } from "prop-types";
-import { FilterWrapper, FilterInput, FilterLabel } from "./Filter.styled";
+import { PropTypes } from 'prop-types';
+import { FilterWrapper, FilterInput, FilterLabel } from './Filter.styled';
 
 const Filter = ({ value, onFilterChange }) => {
   return (
