@@ -1,19 +1,19 @@
-import { Component } from 'react';
-import { nanoid } from 'nanoid';
-import { Container } from 'components/App.styled';
-import ContactForm from 'components/contactForm';
-import ContactList from 'components/contactList';
-import Filter from 'components/filter';
+import { Component } from "react";
+import { nanoid } from "nanoid";
+import { Container } from "./App.styled";
+import ContactForm from "./contactForm";
+import ContactList from "./contactList";
+import Filter from "./filter";
 
 export class App extends Component {
   state = {
     contacts: [
-      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
-      { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
-      { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
-      { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
+      { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
+      { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
+      { id: "id-3", name: "Eden Clements", number: "645-17-79" },
+      { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
     ],
-    filter: '',
+    filter: "",
   };
 
   handleSubmit = (values, { resetForm }) => {
@@ -29,7 +29,7 @@ export class App extends Component {
     );
     dublicateContact
       ? alert(`${contact.name} is already in contacts`)
-      : this.setState(prevState => ({
+      : this.setState((prevState) => ({
           contacts: [...prevState.contacts, { ...contact, id: nanoid() }],
         }));
 
@@ -38,11 +38,11 @@ export class App extends Component {
 
   findDublicateContact = (contact, contactsList) => {
     return contactsList.find(
-      item => item.name.toLowerCase() === contact.name.toLowerCase()
+      (item) => item.name.toLowerCase() === contact.name.toLowerCase()
     );
   };
 
-  onFilterChange = e => {
+  onFilterChange = (e) => {
     this.setState({
       filter: e.currentTarget.value,
     });
@@ -50,14 +50,16 @@ export class App extends Component {
 
   getFilteredContacts = () => {
     const normalizedFilter = this.state.filter.toLowerCase();
-    return this.state.contacts.filter(contact =>
+    return this.state.contacts.filter((contact) =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );
   };
 
-  deleteContact = contactId => {
-    this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+  deleteContact = (contactId) => {
+    this.setState((prevState) => ({
+      contacts: prevState.contacts.filter(
+        (contact) => contact.id !== contactId
+      ),
     }));
   };
 
