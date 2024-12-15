@@ -1,10 +1,13 @@
 import { PropTypes } from 'prop-types';
-import { FilterWrapper, FilterInput, FilterLabel } from './Filter.styled';
-
-const Filter = ({ value, onFilterChange }) => {
+import {
+  FilterWrapper,
+  FilterInput,
+  FilterLabel,
+} from 'components/Filter/Filter.styled';
+export const Filter = ({ value, onFilterChange }) => {
   return (
     <FilterWrapper>
-      <FilterLabel htmlFor="text">Finde contacts by name</FilterLabel>
+      <FilterLabel htmlFor="text">Find contacts by name</FilterLabel>
       <FilterInput
         type="text"
         name="filter"
@@ -14,8 +17,6 @@ const Filter = ({ value, onFilterChange }) => {
     </FilterWrapper>
   );
 };
-
-export default Filter;
 
 Filter.propTypes = {
   value: PropTypes.string.isRequired,

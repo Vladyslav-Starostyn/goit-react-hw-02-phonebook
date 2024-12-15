@@ -7,7 +7,7 @@ import {
   Label,
   SubmitButton,
   Error,
-} from './ContactForm.styled';
+} from 'components/ContactForm/ContactForm.styled';
 
 const schema = yup.object().shape({
   name: yup
@@ -33,7 +33,7 @@ const initialValues = {
   number: '',
 };
 
-const ContactForm = ({ onSubmit }) => {
+export const ContactForm = ({ onSubmit }) => {
   return (
     <Formik
       initialValues={initialValues}
@@ -54,8 +54,6 @@ const ContactForm = ({ onSubmit }) => {
     </Formik>
   );
 };
-
-export default ContactForm;
 
 ContactForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
