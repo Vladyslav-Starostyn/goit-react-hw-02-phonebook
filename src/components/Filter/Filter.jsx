@@ -3,8 +3,9 @@ import {
   FilterWrapper,
   FilterInput,
   FilterLabel,
-} from 'components/Filter/Filter.styled';
-export const Filter = ({ value, onFilterChange }) => {
+} from 'components/filter/Filter.styled';
+
+const Filter = ({ value, onFilterChange }) => {
   return (
     <FilterWrapper>
       <FilterLabel htmlFor="text">Finde contacts by name</FilterLabel>
@@ -17,6 +18,8 @@ export const Filter = ({ value, onFilterChange }) => {
     </FilterWrapper>
   );
 };
+
+export default Filter;
 
 Filter.propTypes = {
   value: PropTypes.string.isRequired,

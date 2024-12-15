@@ -1,6 +1,6 @@
 import { ContactItemNumber, ContactItemButton } from './ContactItem.styled';
 
-export const ContactItem = ({ name, number, onClick }) => {
+const ContactItem = ({ name, number, onClick }) => {
   return (
     <>
       <h2>{name}</h2>
@@ -11,3 +11,4 @@ export const ContactItem = ({ name, number, onClick }) => {
     </>
   );
 };
+export default ContactItem;

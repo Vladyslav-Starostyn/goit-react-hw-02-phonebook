@@ -1,8 +1,8 @@
 import { PropTypes } from 'prop-types';
-import { ContactItem } from '../contactItem/ContactItem';
 import { ContactListEl, ContactListItem } from './ContactList.styled';
+import ContactItem from '../contactItem';
 
-export const ContactList = ({ contacts, deleteContact }) => {
+const ContactList = ({ contacts, deleteContact }) => {
   return (
     <ContactListEl>
       {contacts.map(({ name, number, id }) => (
@@ -17,6 +17,8 @@ export const ContactList = ({ contacts, deleteContact }) => {
     </ContactListEl>
   );
 };
+
+export default ContactList;
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
