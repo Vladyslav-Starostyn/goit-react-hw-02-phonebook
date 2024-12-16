@@ -1,7 +1,7 @@
-import { Component } from 'react';
 import { nanoid } from 'nanoid';
+import { Component } from 'react';
 import { Container } from './App.styled';
-import ContactForm from './contactForm';
+import ContactForm from './contactForm/';
 import ContactList from './contactList';
 import Filter from './filter';
 
@@ -16,24 +16,26 @@ class App extends Component {
     filter: '',
   };
 
-  handleSubmit = (values, { resetForm }) => {
-    const { name, number } = values;
-    const contact = {
-      name,
-      number,
-    };
-
+  formSubmit = (values, { resetForm }) => {
+    // const { name, number } = values;
+    const contact = { ...values, id: nanoid() };
     const dublicateContact = this.findDublicateContact(
       contact,
       this.state.contacts
     );
+
     dublicateContact
       ? alert(`${contact.name} is already in contacts`)
       : this.setState(prevState => ({
-          contacts: [...prevState.contacts, { ...contact, id: nanoid() }],
+          contacts: [...prevState.contacts, contact],
         }));
-
     resetForm();
+  };
+
+  onFilterChange = event => {
+    this.setState({
+      filter: event.currentTarget.value,
+    });
   };
 
   findDublicateContact = (contact, contactsList) => {
@@ -42,19 +44,12 @@ class App extends Component {
     );
   };
 
-  onFilterChange = e => {
-    this.setState({
-      filter: e.currentTarget.value,
-    });
-  };
-
   getFilteredContacts = () => {
     const normalizedFilter = this.state.filter.toLowerCase();
     return this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );
   };
-
   deleteContact = contactId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
@@ -62,11 +57,11 @@ class App extends Component {
   };
 
   render() {
-    const FilteredContacts = this.getFilteredContacts();
     return (
       <Container>
         <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.handleSubmit} />
+        <ContactForm onSubmit={this.formSubmit} />
+
         {this.state.contacts.length > 0 && (
           <h2 style={{ fontSize: 30 }}>Contacts:</h2>
         )}
@@ -76,8 +71,9 @@ class App extends Component {
             onFilterChange={this.onFilterChange}
           />
         )}
+
         <ContactList
-          contacts={FilteredContacts}
+          contacts={this.getFilteredContacts()}
           deleteContact={this.deleteContact}
         />
       </Container>
